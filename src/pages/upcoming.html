@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workout Schedule</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100">
+
+    <div class="container mx-auto px-4 py-8">
+
+        <!-- Title -->
+        <h1 class="text-4xl font-black text-black mb-4">Workout Schedule</h1>
+
+        <!-- Month Navigation -->
+        <div class="flex items-center mb-4">
+            <div class="mr-2 cursor-pointer">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-600" viewBox="0 0 20 20"
+                    fill="currentColor">
+                    <path fill-rule="evenodd"
+                        d="M10.707 4.293a1 1 0 011.414 1.414L7.414 10l4.707 4.293a1 1 0 01-1.414 1.414l-5-5a1 1 0 010-1.414l5-5a1 1 0 010 1.414z"
+                        clip-rule="evenodd" />
+                </svg>
+            </div>
+            <div class="text-gray-600">Feb 2024</div>
+            <div class="ml-2 cursor-pointer">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-600" viewBox="0 0 20 20"
+                    fill="currentColor">
+                    <path fill-rule="evenodd"
+                        d="M9.293 15.707a1 1 0 11-1.414-1.414L12.586 10 7.88 5.293a1 1 0 111.414-1.414l5 5a1 1 0 010 1.414l-5 5z"
+                        clip-rule="evenodd" />
+                </svg>
+            </div>
+        </div>
+
+        <!-- Cards for last 5 days of the week -->
+        <div class="grid grid-cols-5 gap-4">
+            <!-- Sample Card -->
+            <div class="bg-white rounded-lg shadow-md p-4">
+                <div class="font-semibold text-lg mb-2">Sun</div>
+                <div class="font-semibold text-lg mb-2">5</div>
+                <!-- Add content for each day here -->
+            </div>
+            <div class="bg-white rounded-lg shadow-md p-4">
+                <div class="font-semibold text-lg mb-2">Mon</div>
+                <div class="font-semibold text-lg mb-2">6</div>
+                <!-- Add content for each day here -->
+            </div>
+            <div class="bg-white rounded-lg shadow-md p-4">
+                <div class="font-semibold text-lg mb-2">Tue</div>
+                <div class="font-semibold text-lg mb-2">7</div>
+                <!-- Add content for each day here -->
+            </div>
+            <div class="bg-white rounded-lg shadow-md p-4">
+                <div class="font-semibold text-lg mb-2">Wed</div>
+                <div class="font-semibold text-lg mb-2">8</div>
+                <!-- Add content for each day here -->
+            </div>
+            <div class="bg-white rounded-lg shadow-md p-4">
+                <div class="font-semibold text-lg mb-2">Thu</div>
+                <div class="font-semibold text-lg mb-2">9</div>
+                <!-- Add content for each day here -->
+            </div>
+            <!-- Repeat for each day -->
+        </div>
+
+        <!-- Vertical Table -->
+        <!-- Vertical Table -->
+        <div class="overflow-y-auto mt-8">
+            <table class="table-auto w-full">
+                <tbody>
+                    <!-- Sample rows -->
+                    <tr>
+                        <td class="border px-4 py-2">06:00am</td>
+                        <td class="border px-4 py-2">(pushups)</td>
+                    </tr>
+                    <tr>
+                        <td class="border px-4 py-2">07:00am</td>
+                        <td class="border px-4 py-2"></td>
+                    </tr>
+                    <tr>
+                        <td class="border px-4 py-2">08:00am</td>
+                        <td class="border px-4 py-2"></td>
+                    </tr>
+                    <tr>
+                        <td class="border px-4 py-2">09:00am</td>
+                        <td class="border px-4 py-2">(yoga)</td>
+                    </tr>
+                    <tr>
+                        <td class="border px-4 py-2">10:00am</td>
+                        <td class="border px-4 py-2"></td>
+                    </tr>
+                    <!-- Repeat for each time slot -->
+                </tbody>
+            </table>
+        </div>
+
+
+        <!-- Floating "+" Button -->
+        <div class="fixed bottom-4 right-4">
+            <button class="bg-pink-500 text-white rounded-full p-4 text-3xl shadow-lg focus:outline-none">
+                +
+            </button>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
