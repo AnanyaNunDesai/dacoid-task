@@ -11,6 +11,8 @@ $(document).on("click", ".nav-account", function (event) {
 });
 
 $(document).ready(function () {
+  Chart.register(ChartDataLabels);
+
   const initValues1 = [];
   const initValues2 = [];
   const initValues3 = [];
@@ -56,15 +58,15 @@ $(document).ready(function () {
       } else if (i == 58) {
         initValues1.push(70);
         initValues2.push(90);
-        initValues3.push(100);
+        initValues3.push(0);
       } else if (i == 59) {
         initValues1.push(30);
         initValues2.push(0);
         initValues3.push(0);
       } else if (i == 60) {
-        initValues1.push(28);
-        initValues2.push(31);
-        initValues3.push(0);
+        initValues1.push(70);
+        initValues2.push(10);
+        initValues3.push(10);
       } else if (i == 65) {
         initValues1.push(38);
         initValues2.push(0);
@@ -80,7 +82,9 @@ $(document).ready(function () {
   const data2BarColors = [];
 
   for (let i = 0; i < 80; i++) {
-    if (i < 40) {
+    if (i < 35 || (i > 38 && i < 58) || i > 61) {
+      data2BarColors.push("#8099FF");
+    } else if (i < 40) {
       data2BarColors.push("#34B009");
     } else {
       data2BarColors.push("#FD8787");
@@ -106,32 +110,50 @@ $(document).ready(function () {
       datasets: [
         {
           label: "Data 1",
-          barThickness: 3,
+          barThickness: 1.5,
           data: initValues1,
           backgroundColor: "#8099FF",
           borderRadius: {
             topLeft: 15.0,
             topRight: 15.0,
           },
+          datalabels: {
+            font: {
+              family: "Montserrat",
+              size: 13,
+            },
+          },
         },
         {
           label: "Data 2",
-          barThickness: 3,
+          barThickness: 1.5,
           data: initValues2,
           backgroundColor: data2BarColors,
           borderRadius: {
             topLeft: 15.0,
             topRight: 15.0,
           },
+          datalabels: {
+            font: {
+              family: "Montserrat",
+              size: 13,
+            },
+          },
         },
         {
           label: "Data 3",
-          barThickness: 3,
+          barThickness: 1.5,
           data: initValues3,
           backgroundColor: "#7B7B7B",
           borderRadius: {
             topLeft: 15.0,
             topRight: 15.0,
+          },
+          datalabels: {
+            font: {
+              family: "Montserrat",
+              size: 13,
+            },
           },
         },
       ],
@@ -142,9 +164,35 @@ $(document).ready(function () {
         legend: {
           display: false,
         },
-        tooltip: {
-          enabled: false,
+        datalabels: {
+          offset: function (ctx) {
+            if (ctx.dataIndex == 6) {
+              return 65;
+            } else {
+              return 0;
+            }
+          },
+          align: "end",
+          display: function (ctx) {
+            return (
+              ctx.dataIndex == 6 || ctx.dataIndex == 36 || ctx.dataIndex == 59
+            );
+          },
+          formatter: function (value, ctx) {
+            if (ctx.dataIndex == 6 && ctx.datasetIndex == 0) {
+              return "900CAL";
+            } else if (ctx.dataIndex == 36 && ctx.datasetIndex == 2) {
+              return "Good job";
+            } else if (ctx.dataIndex == 59 && ctx.datasetIndex == 2) {
+              return "less than 320cal";
+            } else {
+              return "";
+            }
+          },
         },
+      },
+      tooltip: {
+        enabled: false,
       },
       responsive: true,
       scales: {
@@ -154,13 +202,14 @@ $(document).ready(function () {
             display: false,
           },
           border: {
-            dash: [2, 4],
+            display: false,
           },
           ticks: {
             display: true,
             autoSkip: false,
             maxRotation: 0,
             minRotation: 0,
+            color: "black",
           },
         },
         y: {
@@ -168,8 +217,10 @@ $(document).ready(function () {
           grid: {
             color: "rgba(41, 41, 41, .09)",
             opacity: 6,
+            drawTicks: false,
           },
           border: {
+            display: false,
             dash: [2, 4],
           },
           ticks: { display: false },
@@ -178,3 +229,5 @@ $(document).ready(function () {
     },
   });
 });
+
+Chart.defaults.font.family = "Montserrat";
