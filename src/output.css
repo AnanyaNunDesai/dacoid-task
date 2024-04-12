@@ -1022,12 +1022,12 @@ select {
   column-gap: 0.25rem;
 }
 
-.gap-x-12 {
-  column-gap: 3rem;
+.gap-x-10 {
+  column-gap: 2.5rem;
 }
 
-.gap-x-16 {
-  column-gap: 4rem;
+.gap-x-12 {
+  column-gap: 3rem;
 }
 
 .gap-x-2 {
@@ -1068,10 +1068,6 @@ select {
 
 .gap-y-6 {
   row-gap: 1.5rem;
-}
-
-.gap-x-10 {
-  column-gap: 2.5rem;
 }
 
 .overflow-y-auto {
@@ -1207,12 +1203,6 @@ select {
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
-.from-\[\#DEE5FF\] {
-  --tw-gradient-from: #DEE5FF var(--tw-gradient-from-position);
-  --tw-gradient-to: rgb(222 229 255 / 0) var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-}
-
 .to-\[\#101010\]\/0 {
   --tw-gradient-to: rgb(16 16 16 / 0) var(--tw-gradient-to-position);
 }
@@ -1235,10 +1225,6 @@ select {
 
 .to-white {
   --tw-gradient-to: #fff var(--tw-gradient-to-position);
-}
-
-.to-\[\#809AFF\] {
-  --tw-gradient-to: #809AFF var(--tw-gradient-to-position);
 }
 
 .p-2 {
@@ -1319,6 +1305,10 @@ select {
   padding-right: 0.75rem;
 }
 
+.pr-8 {
+  padding-right: 2rem;
+}
+
 .pt-12 {
   padding-top: 3rem;
 }
@@ -1341,26 +1331,6 @@ select {
 
 .pt-\[20\%\] {
   padding-top: 20%;
-}
-
-.pl-\[-1rem\] {
-  padding-left: -1rem;
-}
-
-.pl-0 {
-  padding-left: 0px;
-}
-
-.pr-5 {
-  padding-right: 1.25rem;
-}
-
-.pr-6 {
-  padding-right: 1.5rem;
-}
-
-.pr-8 {
-  padding-right: 2rem;
 }
 
 .font-\[\'Montserrat\'\] {
@@ -1394,11 +1364,6 @@ select {
 .text-base {
   font-size: 1rem;
   line-height: 1.5rem;
-}
-
-.text-lg {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
 }
 
 .text-sm {
