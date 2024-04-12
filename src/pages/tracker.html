@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../output.css" rel="stylesheet" />
+    <link href="../index.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../index.js"></script>
+  </head>
+  <body>
+    <div class="w-[95%] flex flex-col justify-between items-center p-3">
+      <div
+        class="absolute flex flex-row w-screen justify-between items-center pl-5 pr-3"
+      >
+        <p class="font-medium">9:41</p>
+        <div class="flex flex-row justify-center items-center gap-x-1">
+          <img src="../../assets/cellular.svg" />
+          <img src="../../assets/wifi.svg" />
+          <img src="../../assets/battery.svg" />
+        </div>
+      </div>
+      <div
+        class="absolute flex flex-col items-start w-[100%] h-[900px] pt-[20%] pl-5 px-2 gap-y-6 overflow-y-auto"
+      >
+        <div class="flex flex-row w-[80%] justify-between items-center pl-2">
+          <button
+            class="nav-account flex w-[20px] h-[20px] justify-center items-center bg-[#F1F1F1] rounded"
+            data-target="./login.html"
+          >
+            <img src="../../assets/chevron-left.svg" />
+          </button>
+          <h3 class="text-xl font-semibold">Workout Tracker</h3>
+        </div>
+        <div class="w-full h-[150px]"><canvas id="tracker-graph"></canvas></div>
+        <div
+          class="flex flex-row h-[50px] items-center gap-x-2 pl-2 rounded-lg border border-black border-opacity-5 bg-gradient-to-r from-[#819DFF]/30 to-[#101010]/0"
+        >
+          <img src="../../assets/alert.svg" />
+          <p class="font-medium text-black text-sm leading-4">
+            You've burned fewer calories than yesterday. Time to get moving!
+          </p>
+        </div>
+        <div
+          class="flex flex-row w-full px-2 pt-6 justify-between items-center"
+        >
+          <h3 class="font-semibold text-black">Upcoming Workout</h3>
+          <button class="nav-account" data-target="./schedule.html">
+            <p class="font-medium text-xs text-[#7F7F7F]">See more</p>
+          </button>
+        </div>
+        <div class="flex flex-col w-full justify-center items-center gap-y-3">
+          <div
+            class="flex flex-row w-full h-[75px] justify-between items-center bg-white drop-shadow-xl rounded-lg"
+          >
+            <div
+              class="flex flex-row w-full justify-between items-center px-3 gap-x-2"
+            >
+              <img src="../../assets/full-body.png" />
+              <div class="flex flex-col justify-center gap-y-1">
+                <p class="text-sm text-black font-medium">Full Body Workout</p>
+                <p class="text-xs text-[#7F7F7F] font-medium">Today, 3pm</p>
+              </div>
+              <label class="inline-flex items-center cursor-pointer">
+                <input type="checkbox" value="" class="sr-only peer" />
+                <div
+                  class="relative w-11 h-6 bg-[#8099FF] peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-transparent rounded-full peer dark:bg-[#8099FF] peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-[#8099FF] after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-[#8099FF] peer-checked:bg-[#2A439C]"
+                ></div>
+              </label>
+            </div>
+          </div>
+          <div
+            class="flex flex-row w-full h-[75px] justify-between items-center bg-white drop-shadow-xl rounded-lg"
+          >
+            <div
+              class="flex flex-row w-full justify-between items-center px-3 gap-x-2"
+            >
+              <img src="../../assets/upper-body.png" />
+              <div class="flex flex-col justify-center gap-y-1">
+                <p class="text-sm text-black font-medium">Upper Body Workout</p>
+                <p class="text-xs text-[#7F7F7F] font-medium">4 Feb, 3:30 pm</p>
+              </div>
+              <label class="inline-flex items-center cursor-pointer">
+                <input type="checkbox" value="" class="sr-only peer" />
+                <div
+                  class="relative w-11 h-6 bg-[#8099FF] peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-transparent rounded-full peer dark:bg-[#8099FF] peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-[#8099FF] after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-[#8099FF] peer-checked:bg-[#2A439C]"
+                ></div>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col w-full items-start gap-y-2">
+          <h3 class="font-semibold text-black">What Do You Want to Train</h3>
+          <div
+            class="flex flex-row justify-between items-center p-3 w-full h-[124px] rounded-lg bg-[#8CB1FF]/60"
+          >
+            <div class="flex flex-col gap-y-1 pl-2">
+              <p class="font-medium text-black text-xs">Full Body Workout</p>
+              <p class="font-medium text-black text-[10px]">Arms</p>
+              <p class="font-medium text-black text-[10px]">Chest</p>
+              <p class="font-medium text-black text-[10px]">Back</p>
+              <p class="font-medium text-black text-[10px]">Legs</p>
+            </div>
+            <div class="w-[100px] h-[100px] rounded-full">
+              <img src="../../assets/train.png" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="fixed z-100 bottom-0 h-[76px] w-full flex flex-row justify-between items-center text-[#7F7F7F] bg-white p-7"
+      >
+        <img src="../../assets/home.svg" />
+        <img class="text-[#829DFF]" src="../../assets/monitor.svg" />
+        <button
+          class="nav-account relative z-999 bottom-10 left-[0%] w-[63px] h-[63px] rounded-full flex justify-center items-center drop-shadow-lg bg-gradient-to-l from-[#DEE5FF] to-[#809AFF]"
+          data-target="./schedule.html"
+        >
+          <img src="../../assets/search.svg" />
+        </button>
+        <img src="../../assets/camera.svg" />
+        <img src="../../assets/profile.svg" />
+      </div>
+    </div>
+  </body>
+</html>

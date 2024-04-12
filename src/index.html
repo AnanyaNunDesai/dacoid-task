@@ -1,50 +1,57 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+    <link href="./index.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="index.js"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="./output.css" rel="stylesheet" />
-  <link href="./index.css" rel="stylesheet" />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script src="index.js"></script>
-</head>
-
-<body>
-  <div class="h-screen w-screen flex flex-col justify-between items-center p-3">
-    <div class="flex flex-row w-screen justify-between items-center pl-5 pr-3">
-      <p class="font-medium">9:41</p>
-      <div class="flex flex-row justify-center items-center gap-x-1">
-        <img src="../assets/cellular.svg" />
-        <img src="../assets/wifi.svg" />
-        <img src="../assets/battery.svg" />
+  <body>
+    <div
+      class="h-screen w-screen flex flex-col justify-between items-center p-3"
+    >
+      <div
+        class="flex flex-row w-screen justify-between items-center pl-5 pr-3"
+      >
+        <p class="font-medium">9:41</p>
+        <div class="flex flex-row justify-center items-center gap-x-1">
+          <img src="../assets/cellular.svg" />
+          <img src="../assets/wifi.svg" />
+          <img src="../assets/battery.svg" />
+        </div>
+      </div>
+      <div class="absolute top-10 right-3">
+        <button>
+          <p
+            class="nav-account underline text-[#9FB2FF]"
+            data-target="./pages/signup.html"
+          >
+            Skip
+          </p>
+        </button>
+      </div>
+      <div class="flex flex-col justify-center items-center gap-y-12">
+        <img src="../assets/tracking.png" />
+        <div class="flex flex-col gap-y-3">
+          <h3 class="text-xl font-semibold">Track Your Goal</h3>
+          <p class="text-base font-medium leading-tight text-[#787878]">
+            Don't worry if you have trouble determining your goals, We can help
+            you determine your goals and track your goals
+          </p>
+        </div>
+      </div>
+      <div class="p-3 w-full flex flex-row justify-end items-center">
+        <button
+          class="preview-button flex justify-center items-center bg-gradient-to-l from-[#89A1FF] to-white rounded-full w-[60px] h-[60px]"
+          data-target="./pages/preview_next.html"
+        >
+          <img class="w-2.5" src="../assets/chevron-right-light.svg" />
+        </button>
+        <div class="bg-[#89A1FF]"></div>
       </div>
     </div>
-    <div class="absolute top-10 right-3">
-      <button>
-        <p class="underline text-[#9FB2FF]">Skip</p>
-      </button>
-    </div>
-    <div class="flex flex-col justify-center items-center gap-y-12">
-      <img src="../assets/tracking.png" />
-      <div class="flex flex-col gap-y-3">
-        <h3 class="text-xl font-semibold">Track Your Goal</h3>
-        <p class="text-base font-medium leading-tight text-[#787878]">
-          Don't worry if you have trouble determining your goals, We can help
-          you determine your goals and track your goals
-        </p>
-      </div>
-    </div>
-    <div class="p-3 w-full flex flex-row justify-end items-center">
-      <button
-        class="preview-button flex justify-center items-center bg-gradient-to-l from-[#89A1FF] to-white rounded-full w-[60px] h-[60px]"
-        data-target="./pages/preview_next.html">
-        <img class="w-2.5" src="../assets/chevron-right.svg" />
-      </button>
-      <div class="bg-[#89A1FF]">
-      </div>
-    </div>
-  </div>
-</body>
-
+  </body>
 </html>

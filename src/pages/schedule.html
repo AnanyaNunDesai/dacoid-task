@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../output.css" rel="stylesheet" />
+    <link href="../index.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="../index.js"></script>
+  </head>
+  <body>
+    <div class="w-[100%] flex flex-col justify-between items-center p-3">
+      <div
+        class="absolute flex flex-row w-screen justify-between items-center pl-5 pr-3"
+      >
+        <p class="font-medium">9:41</p>
+        <div class="flex flex-row justify-center items-center gap-x-1">
+          <img src="../../assets/cellular.svg" />
+          <img src="../../assets/wifi.svg" />
+          <img src="../../assets/battery.svg" />
+        </div>
+      </div>
+      <div
+        class="relative flex flex-col items-start w-[100%] h-[900px] pt-[20%] pl-5 px-2 gap-y-6 overflow-y-auto"
+      >
+        <div class="flex flex-col w-full gap-y-1">
+          <div class="flex flex-row w-[80%] justify-between items-center pl-2">
+            <button
+              class="nav-account flex w-[20px] h-[20px] justify-center items-center bg-[#F1F1F1] rounded"
+              data-target="./tracker.html"
+            >
+              <img src="../../assets/chevron-left.svg" />
+            </button>
+            <h3 class="text-xl font-semibold">Workout Schedule</h3>
+          </div>
+          <div class="flex flex-row gap-x-3 justify-center items-center">
+            <img src="../../assets/chevron-left.svg" />
+            <p class="text-sm font-semibold text-[#2C2B2B] py-2">Feb 2024</p>
+            <img
+              class="w-[8px] h-[10px]"
+              src="../../assets/chevron-right-dark.svg"
+            />
+          </div>
+          <div
+            class="flex flex-row justify-center items-center w-full gap-x-8 font-quicksand"
+          >
+            <div
+              class="flex flex-col items-center text-[#454545] font-semibold"
+            >
+              <p class="text-[11px]">Sun</p>
+              <h3 class="text-[28px]">5</h3>
+            </div>
+            <div
+              class="flex flex-col items-center pt-2 bg-gradient-to-l from-[#8DA4FF] to-[#D1DBFF] text-white font-semibold rounded-lg w-[63px] h-[74px]"
+            >
+              <p class="text-[11px]">Mon</p>
+              <h3 class="text-[28px]">6</h3>
+            </div>
+            <div
+              class="flex flex-col items-center text-[#454545] font-semibold"
+            >
+              <p class="text-[11px]">Tue</p>
+              <h3 class="text-[28px]">7</h3>
+            </div>
+            <div
+              class="flex flex-col items-center text-[#454545] font-semibold"
+            >
+              <p class="text-[11px]">Wed</p>
+              <h3 class="text-[28px]">8</h3>
+            </div>
+            <div
+              class="flex flex-col items-center text-[#454545] font-semibold"
+            >
+              <p class="text-[11px]">Thu</p>
+              <h3 class="text-[28px]">9</h3>
+            </div>
+          </div>
+          <div
+            class="flex flex-col w-[100%] text-xs font-semibold pt-8 gap-y-3"
+          >
+            <p class="pl-3">06:00 AM</p>
+            <div class="h-[1px] w-[100%] bg-[#7F7F7F]"></div>
+            <p class="pl-3">07:00 AM</p>
+            <div class="h-[1px] w-[100%] bg-[#7F7F7F]"></div>
+            <div
+              class="absolute top-[33%] right-5 flex justify-center items-center bg-gradient-to-l from-[#D3A4F4] to-[#E9B1E0] h-[30px] rounded-xl p-2"
+            >
+              <p class="text-white text-[12px]">Ab Workout, 7:30am</p>
+            </div>
+            <p class="pl-3">08:00 AM</p>
+            <div class="h-[1px] w-[100%] bg-[#7F7F7F]"></div>
+            <p class="pl-3">09:00 AM</p>
+            <div class="h-[1px] w-[100%] bg-[#7F7F7F]"></div>
+            <div
+              class="absolute top-[42%] right-[20%] flex justify-center items-center bg-gradient-to-l from-[#D3A4F4] to-[#E9B1E0] h-[30px] rounded-xl p-2"
+            >
+              <p class="text-white text-[12px]">Upperbody Workout, 9am</p>
+            </div>
+            <p class="pl-3">10:00 AM</p>
+            <div class="h-[1px] w-[100%] bg-[#7F7F7F]"></div>
+            <p class="pl-3">11:00 AM</p>
+            <div class="h-[1px] w-[100%] bg-[#7F7F7F]"></div>
+            <p class="pl-3">12:00 PM</p>
+            <div class="h-[1px] w-[100%] bg-[#7F7F7F]"></div>
+            <p class="pl-3">1:00 PM</p>
+            <div class="h-[1px] w-[100%] bg-[#7F7F7F]"></div>
+            <p class="pl-3">2:00 PM</p>
+            <div class="h-[1px] w-[100%] bg-[#7F7F7F]"></div>
+            <div
+              class="absolute top-[63%] right-[20%] flex justify-center items-center bg-[#F1F1F1] h-[30px] rounded-xl p-2"
+            >
+              <p class="text-[12px]">Lowerbody Workout, 3pm</p>
+            </div>
+            <p class="pl-3">3:00 PM</p>
+            <div class="h-[1px] w-[100%] bg-[#7F7F7F]"></div>
+            <p class="pl-3">4:00 PM</p>
+            <div class="h-[1px] w-[100%] bg-[#7F7F7F]"></div>
+            <p class="pl-3">5:00 PM</p>
+            <div class="h-[1px] w-[100%] bg-[#7F7F7F]"></div>
+            <div
+              class="absolute top-[69%] right-6 flex justify-center items-center bg-gradient-to-l from-[#D3A4F4] to-[#E9B1E0] h-[63px] w-[63px] rounded-full p-2"
+            >
+              <img src="../../assets/plus.svg" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="fixed z-100 bottom-0 h-[76px] w-full flex flex-row justify-between items-center text-[#7F7F7F] bg-white p-7"
+      >
+        <img src="../../assets/home.svg" />
+        <img class="text-[#829DFF]" src="../../assets/monitor.svg" />
+        <button
+          class="relative z-999 bottom-10 left-[0%] w-[63px] h-[63px] rounded-full flex justify-center items-center drop-shadow-lg bg-gradient-to-l from-[#DEE5FF] to-[#809AFF]"
+        >
+          <img src="../../assets/search.svg" />
+        </button>
+        <img src="../../assets/camera.svg" />
+        <img src="../../assets/profile.svg" />
+      </div>
+    </div>
+  </body>
+</html>
