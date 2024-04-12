@@ -11,18 +11,18 @@
 
   <body>
     <div
-      class="h-screen w-screen flex flex-col justify-between items-center p-3"
+      class="absolute flex flex-row w-screen justify-between items-center p-3 pl-5"
     >
-      <div
-        class="flex flex-row w-screen justify-between items-center pl-5 pr-3"
-      >
       <p class="font-semibold">9:41</p>
-        <div class="flex flex-row justify-center items-center gap-x-1">
-          <img src="./assets/cellular.svg" />
-          <img src="./assets/wifi.svg" />
-          <img src="./assets/battery.svg" />
-        </div>
+      <div class="flex flex-row justify-center items-center gap-x-1">
+        <img src="./assets/cellular.svg" />
+        <img src="./assets/wifi.svg" />
+        <img src="./assets/battery.svg" />
       </div>
+    </div>
+    <div
+      class="absolute h-screen w-screen flex flex-col justify-center items-center p-3"
+    >
       <div class="absolute top-10 right-3">
         <button>
           <p
@@ -43,15 +43,20 @@
           </p>
         </div>
       </div>
-      <div class="p-3 w-full flex flex-row justify-end items-center">
-        <button
-          class="preview-button flex justify-center items-center bg-gradient-to-l from-[#89A1FF] to-white rounded-full w-[60px] h-[60px]"
-          data-target="./src/pages/preview_next.html"
-        >
-          <img class="w-2.5" src="./assets/chevron-right-light.svg" />
-        </button>
-        <div class="bg-[#89A1FF]"></div>
-      </div>
     </div>
+    <button
+      class="preview-button absolute right-0 bottom-8 h-[100px] w-[80px]"
+      data-target="./src/pages/preview_next.html"
+    >
+      <div
+        class="flex justify-center items-center bg-gradient-to-l from-[#89A1FF] to-white rounded-full w-[50px] h-[50px] mt-5"
+      >
+        <img class="w-2.5" src="./assets/chevron-right-light.svg" />
+      </div>
+      <img
+        class="absolute top-[32px] left-[27px] h-[41px]"
+        src="./assets/progress-one.svg"
+      />
+    </button>
   </body>
 </html>

@@ -765,8 +765,24 @@ select {
   bottom: 1rem;
 }
 
+.bottom-8 {
+  bottom: 2rem;
+}
+
+.left-0 {
+  left: 0px;
+}
+
 .left-\[0\%\] {
   left: 0%;
+}
+
+.left-\[27px\] {
+  left: 27px;
+}
+
+.right-0 {
+  right: 0px;
 }
 
 .right-3 {
@@ -793,6 +809,14 @@ select {
   top: 2.5rem;
 }
 
+.top-\[30px\] {
+  top: 30px;
+}
+
+.top-\[32px\] {
+  top: 32px;
+}
+
 .top-\[37\%\] {
   top: 37%;
 }
@@ -816,6 +840,10 @@ select {
 
 .ml-0 {
   margin-left: 0px;
+}
+
+.mt-5 {
+  margin-top: 1.25rem;
 }
 
 .flex {
@@ -872,6 +900,10 @@ select {
 
 .h-\[30px\] {
   height: 30px;
+}
+
+.h-\[41px\] {
+  height: 41px;
 }
 
 .h-\[44px\] {
@@ -954,8 +986,8 @@ select {
   width: 45%;
 }
 
-.w-\[60px\] {
-  width: 60px;
+.w-\[50px\] {
+  width: 50px;
 }
 
 .w-\[63px\] {
@@ -964,6 +996,10 @@ select {
 
 .w-\[80\%\] {
   width: 80%;
+}
+
+.w-\[80px\] {
+  width: 80px;
 }
 
 .w-\[8px\] {
@@ -1004,10 +1040,6 @@ select {
 
 .items-center {
   align-items: center;
-}
-
-.justify-end {
-  justify-content: flex-end;
 }
 
 .justify-center {
@@ -1133,11 +1165,6 @@ select {
 .bg-\[\#8099FF\] {
   --tw-bg-opacity: 1;
   background-color: rgb(128 153 255 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#89A1FF\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(137 161 255 / var(--tw-bg-opacity));
 }
 
 .bg-\[\#8CB1FF\]\/60 {
