@@ -1070,6 +1070,10 @@ select {
   row-gap: 1.5rem;
 }
 
+.gap-x-10 {
+  column-gap: 2.5rem;
+}
+
 .overflow-y-auto {
   overflow-y: auto;
 }
@@ -1203,6 +1207,12 @@ select {
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
+.from-\[\#DEE5FF\] {
+  --tw-gradient-from: #DEE5FF var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(222 229 255 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
 .to-\[\#101010\]\/0 {
   --tw-gradient-to: rgb(16 16 16 / 0) var(--tw-gradient-to-position);
 }
@@ -1225,6 +1235,10 @@ select {
 
 .to-white {
   --tw-gradient-to: #fff var(--tw-gradient-to-position);
+}
+
+.to-\[\#809AFF\] {
+  --tw-gradient-to: #809AFF var(--tw-gradient-to-position);
 }
 
 .p-2 {
